@@ -1,16 +1,22 @@
-$color-font: #fff;
-$color-bg-default: #33f;
+$color-font: #EEFFAB;
+$color-bg-default: #EEFFAB;
 $font-default: Arial, Helvetica, sans-serif;
 
 * {
+    text-align: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
+
+
 body {
     font-family: $font-default;
     margin: 0;
+    background-color: #EEFFAB;
 }
 
 h1 {
@@ -44,6 +50,42 @@ h1 {
     }
 
 }
+
+main {
+
+    max-width: auto;
+    display: block;
+    flex-wrap: wrap-reverse;
+    align-content: center;
+    justify-content: center;
+}
+
+span {
+    font-size: x-large
+}
+
+img {
+    box-shadow: 0 1 px 2px #0003;
+    width: auto;
+}
+
+.swiper {
+    height: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 450px) {
+    .swiper {
+        height: 270px;
+    }
+}
+
 header {
     background-color: $color-bg-default;
     width: 100vw;
@@ -56,49 +98,41 @@ header {
         position: relative;
         z-index: 9;
     }
+    
 }
 
 .waves {
     bottom: 0;
-    position: absolute;
+    position: flex;
     left: 0;
     right: 0;
     width: 110%;
 
     .wave-01 {
-        animation: wave1 3s ease-in-out infinite alternate;
+        animation: wave1 0.4s ease-in-out infinite alternate;
         
     }
 
     .wave-02 {
-        animation: wave2 3s ease-in-out infinite alternate;
+        animation: wave2 0.4s ease-in-out infinite alternate;
     }
 
-    .wave-03 {
-        animation: dash1 3s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
-        stroke-dasharray: 150;
-        stroke: #fff;
-        stroke-width: 3px;
-    }
+   
 }
 
 @keyframes wave1 {
     from {
-        transform: translateX(-50px);
+        transform: translatey(100px);
     }
 }
 
 @keyframes wave2 {
     from {
-        transform: translateX(-100px);
+        transform: translatex(100px);
     }
 }
 
-@keyframes wave3 {
-    from {
-        transform: translateX(-20px);
-    }
-}
+
 
 @keyframes dash1 {
     from {
